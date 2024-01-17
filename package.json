@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "cypress": "^13.6.2",
+    "cypress": "^13.6.3",
     "cypress-cucumber-preprocessor": "^4.3.1"
   }
 }

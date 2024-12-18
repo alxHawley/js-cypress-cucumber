@@ -1,6 +1,6 @@
 # js-cypress
  
-This is a JS & Cypress BDD project that utilizes the Cucumber framework. It will be a replicate my python-behave project - simply practice in creating test automation using different langauges, frameworks, and tools. This project (WIP) is a just behind the python-behave project, but it has a feature file and related steps file for login tests. I've not decided on an API tool for JS but that will be included in this project.
+This is a JS & Cypress BDD project that utilizes the Cucumber framework. It will be replicate my python-behave project - simply practice in creating test automation with different langauges, frameworks, and tools. This project (WIP) is a just behind the python-behave project, but it has a feature file and related steps file for login tests. I've not decided on an API tool for JS but that will be included in this project.
 
 ## Cypress Test Automation
 

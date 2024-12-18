@@ -27,19 +27,14 @@ https://cucumber.io/
     npm install
     ```
 
-3. **Install Cucumber:**
-    ```bash
-    npm install --save-dev @cucumber/cucumber
-    ```
-
-4. **Open Cypress Test Runner:**
+3. **Open Cypress Test Runner:**
     ```bash
     npx cypress open
     ```
     
     OR
 
-5. **Run tests:**
+4. **Run tests:**
     ```bash
     npx cypress run
     ```

@@ -1,36 +1,12 @@
 # js-cypress
  
-This is a JS & Cypress BDD project that utilizes the Cucumber framework. Essentially, it will be a replica of my python-behave project. Simply practice in creating test automation using different langauges and frameworks. This one is just getting started so have only recreated a login.feature but will soon add additional API and E2E features.
+This is a JS & Cypress BDD project that utilizes the Cucumber framework. It will be a replicate my python-behave project - simply practice in creating test automation using different langauges, frameworks, and tools. This project (WIP) is a just behind the python-behave project, but it has a feature file and related steps file for login tests. I've not decided on an API tool for JS but that will be included in this project.
 
 ## Cypress Test Automation
 
 Cypress is a powerful end-to-end testing framework for web applications. It allows developers to write tests in JavaScript, providing a rich set of features for interacting with the DOM, making assertions, and controlling the browser. Cypress runs directly in the browser, giving it access to everything happening on the page, which makes it easy to debug and understand test failures. It also comes with built-in support for mocking and stubbing network requests, making it a comprehensive tool for testing modern web applications.
 
 https://www.cypress.io/
-
-## Installation/ Setup
-
-1. **Clone the repository:**
-    ```bash
-    git clone https://github.com/your-username/js-cypress.git
-    cd js-cypress
-    ```
-
-2. **Install dependencies:**
-    ```bash
-    npm install
-    ```
-
-3. **Open Cypress Test Runner:**
-    ```bash
-    npx cypress open
-    ```
-
-4. **Run tests:**
-    ```bash
-    npx cypress run
-    ```
-
 
 ## Cucumber BDD Framework
 
@@ -42,7 +18,7 @@ https://cucumber.io/
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/js-cypress.git
+    git clone https://github.com/alxHalwey/js-cypress.git
     cd js-cypress
     ```
 
@@ -60,6 +36,8 @@ https://cucumber.io/
     ```bash
     npx cypress open
     ```
+    
+    OR
 
 5. **Run tests:**
     ```bash

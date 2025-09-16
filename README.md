@@ -1,51 +1,197 @@
-# JavaScript BDD: Test Automation with the Cucumber Framework and Cypress
- 
-This is a JS & Cypress BDD project that utilizes the Cucumber framework. It will replicate my python-behave project - simply practice in creating test automation with different langauges, frameworks, and tools. This project (WIP) is a just behind the python-behave project, but it has a feature file and related steps file for login tests. I've not decided on an API tool for JS but that will be included in this project.
+# JavaScript BDD: Test Automation with Cypress and Cucumber
 
-## Cypress Test Automation
+[![Cypress](https://img.shields.io/badge/Cypress-12.0.0-00C58E?style=flat-square&logo=cypress)](https://www.cypress.io/)
+[![Cucumber](https://img.shields.io/badge/Cucumber-BDD-23D96C?style=flat-square&logo=cucumber)](https://cucumber.io/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat-square&logo=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Node.js](https://img.shields.io/badge/Node.js-18+-339933?style=flat-square&logo=node.js)](https://nodejs.org/)
 
-Cypress is a powerful end-to-end testing framework for web applications. It allows developers to write tests in JavaScript, providing a rich set of features for interacting with the DOM, making assertions, and controlling the browser. Cypress runs directly in the browser, giving it access to everything happening on the page, which makes it easy to debug and understand test failures. It also comes with built-in support for mocking and stubbing network requests, making it a comprehensive tool for testing modern web applications.
+A comprehensive JavaScript test automation project that combines **Cypress** for end-to-end testing with **Cucumber** for Behavior-Driven Development (BDD). This project demonstrates modern web application testing practices using industry-standard tools and frameworks.
 
-https://www.cypress.io/
+## Table of Contents
 
-## Cucumber BDD Framework
+- [Overview](#overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Running Tests](#running-tests)
+- [Contributing](#contributing)
+- [License](#license)
 
-Cucumber is a testing tool that supports Behavior-Driven Development (BDD). BDD is a software development approach that encourages collaboration between developers, testers, and business stakeholders. Cucumber allows you to write test scenarios in plain language using Gherkin syntax, making it easier for non-technical team members to understand and contribute to the test cases. These scenarios are then mapped to code, which executes the tests. This approach helps ensure that the software meets business requirements and improves communication within the team.
+## Overview
 
-https://cucumber.io/
+This project serves as a practical implementation of BDD testing methodology using JavaScript, Cypress, and Cucumber. It provides a solid foundation for web application test automation with clear separation of concerns between test scenarios (written in Gherkin) and implementation code.
 
-## Installation/ Setup
+The project includes:
+- Feature files written in Gherkin syntax
+- Step definitions for test implementation
+- Cypress configuration and custom commands
+- Comprehensive test coverage for web application functionality
+
+## Features
+
+- ✅ **BDD Testing**: Write tests in plain English using Gherkin syntax
+- ✅ **Cypress Integration**: Leverage Cypress's powerful testing capabilities
+- ✅ **Cross-browser Support**: Test across different browsers and devices
+- ✅ **API Testing**: Built-in support for API endpoint testing
+- ✅ **Visual Testing**: Screenshot and video recording capabilities
+- ✅ **Parallel Execution**: Run tests in parallel for faster feedback
+- ✅ **CI/CD Ready**: Easy integration with continuous integration pipelines
+
+## Technologies Used
+
+### [Cypress](https://www.cypress.io/)
+A modern end-to-end testing framework that runs directly in the browser, providing:
+- Real-time test execution and debugging
+- Automatic waiting and retry mechanisms
+- Built-in network request mocking and stubbing
+- Time-travel debugging capabilities
+- Screenshot and video recording
+
+### [Cucumber](https://cucumber.io/)
+A BDD testing tool that supports:
+- Gherkin syntax for readable test scenarios
+- Collaboration between technical and non-technical team members
+- Living documentation that stays in sync with code
+- Step definition mapping for test implementation
+
+## Prerequisites
+
+Before running this project, ensure you have the following installed:
+
+- **Node.js** (version 18 or higher)
+- **npm** (comes with Node.js)
+- **Git** (for cloning the repository)
+
+## Installation
 
 1. **Clone the repository:**
-    ```bash
-    git clone https://github.com/alxHalwey/js-cypress.git
-    cd js-cypress
-    ```
+   ```bash
+   git clone https://github.com/alxHalwey/js-cypress.git
+   cd js-cypress
+   ```
 
 2. **Install dependencies:**
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 
-3. **Open Cypress Test Runner:**
-    ```bash
-    npx cypress open
-    ```
-    
-    OR
+3. **Verify installation:**
+   ```bash
+   npx cypress verify
+   ```
 
-4. **Run tests:**
-    ```bash
-    npx cypress run
-    ```
+## Usage
 
-## Directory Structure
+### Opening the Test Runner
 
-- `cypress/`: Contains Cypress test files and configurations.
-  - `integration/`: Contains test specifications.
-    - `features/`: Contains Cucumber feature files.
-  - `support/`: Contains support files and custom commands.
-- `node_modules/`: Contains project dependencies.
-- `package.json`: Contains project metadata and dependencies.
-- `cypress.json`: Cypress configuration file.
-- `README.md`: Project documentation.
+To open the Cypress Test Runner with a graphical interface:
+
+```bash
+npx cypress open
+```
+
+### Running Tests in Headless Mode
+
+To run all tests in headless mode:
+
+```bash
+npx cypress run
+```
+
+### Running Specific Tests
+
+To run tests for a specific feature:
+
+```bash
+npx cypress run --spec "cypress/integration/features/login.feature"
+```
+
+### Running Tests in Different Browsers
+
+```bash
+# Chrome
+npx cypress run --browser chrome
+
+# Firefox
+npx cypress run --browser firefox
+
+# Edge
+npx cypress run --browser edge
+```
+
+## Project Structure
+
+```
+js-cypress/
+├── cypress/                          # Cypress test files and configurations
+│   ├── integration/                  # Test specifications
+│   │   └── features/                 # Cucumber feature files
+│   │       └── login.feature         # Login test scenarios
+│   ├── support/                      # Support files and custom commands
+│   │   ├── commands.js              # Custom Cypress commands
+│   │   └── step_definitions/        # Cucumber step definitions
+│   │       └── login_steps.js       # Login step implementations
+│   └── fixtures/                     # Test data files
+├── node_modules/                     # Project dependencies
+├── package.json                      # Project metadata and dependencies
+├── cypress.json                      # Cypress configuration
+├── .gitignore                        # Git ignore rules
+└── README.md                         # Project documentation
+```
+
+## Running Tests
+
+### Available Test Commands
+
+| Command | Description |
+|---------|-------------|
+| `npm test` | Run all tests in headless mode |
+| `npm run test:open` | Open Cypress Test Runner |
+| `npm run test:chrome` | Run tests in Chrome browser |
+| `npm run test:firefox` | Run tests in Firefox browser |
+| `npm run test:headed` | Run tests in headed mode |
+
+### Test Execution Options
+
+```bash
+# Run with verbose output
+npx cypress run --reporter spec
+
+# Run specific test file
+npx cypress run --spec "cypress/integration/features/**/*.feature"
+
+# Run tests in parallel
+npx cypress run --parallel
+
+# Generate test report
+npx cypress run --reporter junit --reporter-options "mochaFile=results/results-[hash].xml"
+```
+
+## Contributing
+
+We welcome contributions to this project! Please follow these steps:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+### Development Guidelines
+
+- Follow the existing code style and conventions
+- Write clear and descriptive commit messages
+- Add tests for new functionality
+- Update documentation as needed
+- Ensure all tests pass before submitting a PR
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+**Note**: This project is currently under active development. Some features may be experimental or subject to change.
